@@ -58,8 +58,13 @@
   color: rgb(255, 255, 255);
 }
 
-.explination :last-child {
+.explination :nth-child(2) {
   top: 350px;
+}
+
+.explination :last-child {
+  top: 400px;
+  left: 830px; 
 }
 
 .score > * {
@@ -96,7 +101,9 @@
 }
 #rangeinput {
   position: absolute;
+  align-self: center;
+  height: 20px;
   width: 50px;
   top: 400px;
-  left: 800px;
+  left: 750px;
 }
