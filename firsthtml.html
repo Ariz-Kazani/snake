@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="firstcss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <title>Snake</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <canvas id="myCanvas" width="500" height="450"></canvas>
+    <img class="headJPG" src="head2.jpg" />
+    <div class="winOrLose">
+      <h1 class="winOrLose" id="loseMessage"></h1>
+      <h1 class="winOrLose" id="winMessage"></h1>
+    </div>
+    <input type="range" id="rangeinput" min="1" max="3" value="2" onchange = "rangevalue.value=value"/>
+    <div class="score">
+      <h1 class="score">Score:</h1>
+      <h1 class="score" id="uScore"></h1>
+    </div>
+    <div class="explination">
+      <h3 class="explination">Enable Self Hit</h3>
+      <h3 class="explination">Enable Walls</h3>
+    </div>
+    <div class="title">SNAKE</div>
+    <h3 class="prompts"></h3>
+    <input id="canHitSelf" type="checkbox" checked />
+    <input id="walls" type="checkbox" checked />
+    <script src="r.js"></script>
+  </body>
+</html>
