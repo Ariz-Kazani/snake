@@ -88,12 +88,12 @@ function display() {
     ctx.fillRect(snake[i].x + 2, snake[i].y + 2, 46, 46);
   }
   if (moving == true) {
-    ctx.drawImage(headJPG, head.x, head.y);
     ctx.fillStyle = aInColor;
     ctx.fillRect(apple.x, apple.y, 50, 50);
     ctx.fillStyle = aOutColor;
     ctx.fillRect(apple.x + 2, apple.y + 2, 46, 46);
   }
+  ctx.drawImage(headJPG, head.x, head.y);
 }
 display();
 
