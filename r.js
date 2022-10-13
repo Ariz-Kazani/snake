@@ -66,8 +66,8 @@ function speedVal() {
 }
 // displays the background, snake and apple. Also clears objects from the old frame
 function display() {
-  var sInColor = "rgb( 0, 0, 100)";
-  var sOutColor = "rgb( 0, 0, 255)";
+  var sInColor = godModeColor("rgb( 0, 0, 100)");
+  var sOutColor = godModeColor("rgb( 0, 0, 255)");
   var aInColor = "rgb( 0, 100, 0)";
   var aOutColor = "rgb( 0, 255, 20)";
   if (score < 87 && moving == false) {
@@ -115,8 +115,8 @@ function sInFrame() {
 }
 
 //checks to see if go mode is enabled
-function checkGodMode(prevRGB) {
-  if (!canHitSelf.checked && !wallHit.checked && speeds === 3) {
+function godModeColor(prevRGB) {
+  if (canHitSelf.checked == false && wallHit.checked == false && speeds == 3) {
     return "rgb( " + Math.random() * 256 + ", " + Math.random() * 256 + ", " + Math.random() * 256 + ")";
   } else {
     return prevRGB;
