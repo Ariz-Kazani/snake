@@ -117,7 +117,15 @@ function sInFrame() {
 //checks to see if go mode is enabled
 function godModeColor(prevRGB) {
   if (canHitSelf.checked == false && wallHit.checked == false && speeds == 3) {
-    return "rgb( " + Math.random() * 256 + ", " + Math.random() * 256 + ", " + Math.random() * 256 + ")";
+    return (
+      "rgb( " +
+      Math.random() * 256 +
+      ", " +
+      Math.random() * 256 +
+      ", " +
+      Math.random() * 256 +
+      ")"
+    );
   } else {
     return prevRGB;
   }
@@ -254,26 +262,19 @@ if (start == false) {
 
 //movement of the snake
 window.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "ArrowLeft":
-      if (cDirection != "right") {
-        direction = "left";
-      }
-      break;
-    case "ArrowRight":
-      if (cDirection != "left") {
-        direction = "right";
-      }
-      break;
-    case "ArrowUp":
-      if (cDirection != "down") {
-        direction = "up";
-      }
-      break;
-    case "ArrowDown":
-      if (cDirection != "up") {
-        direction = "down";
-      }
-      break;
+  if (e.key == "ArrowLeft" && cDirection != "right") {
+    direction = "left";
+  }
+
+  if (e.key == "ArrowRight" && cDirection != "left") {
+    direction = "right";
+  }
+
+  if (e.key == "ArrowUp" && cDirection != "down") {
+    direction = "up";
+  }
+
+  if (e.key == "ArrowDown" && cDirection != "up") {
+    direction = "down";
   }
 });
