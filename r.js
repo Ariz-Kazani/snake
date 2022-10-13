@@ -61,9 +61,12 @@ function updateScore() {
   score++;
   dScore.innerHTML = score;
 }
+
+//gets speed sekected by user
 function speedVal() {
   speeds = rangeinput.value;
 }
+
 // displays the background, snake and apple. Also clears objects from the old frame
 function display() {
   var sInColor = godModeColor("rgb( 0, 0, 100)");
