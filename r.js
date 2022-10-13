@@ -114,6 +114,15 @@ function sInFrame() {
   }
 }
 
+//checks to see if go mode is enabled
+function checkGodMode(prevRGB) {
+  if (!canHitSelf.checked && !wallHit.checked && speeds === 3) {
+    return "rgb( " + Math.random() * 256 + ", " + Math.random() * 256 + ", " + Math.random() * 256 + ")";
+  } else {
+    return prevRGB;
+  }
+}
+
 //moves the snake
 function moveSnake() {
   if (moving == true) {
