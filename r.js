@@ -242,7 +242,9 @@ function restart() {
     { x: 150, y: 200 },
   ];
   apple = spawnApple();
+  speeds = 2;
   display();
+  speeds = rangeinput.value;
 }
 
 // start the movement
