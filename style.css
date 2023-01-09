@@ -4,13 +4,7 @@
   font-family: 'Silkscreen', cursive;
 }
 
-.background {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+body {
   background-color: rgb(92, 92, 92);
 }
 
