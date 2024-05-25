@@ -13,7 +13,6 @@ window.addEventListener(
   },
   false
 );
-// This is not my code ^ it disables scrolling with arrow keys and spacebar
 
 let loseMessage = document.getElementById("loseMessage");
 let winMessage = document.getElementById("winMessage");
@@ -25,19 +24,19 @@ let score = 0;
 let dScore = document.getElementById("uScore");
 dScore.innerHTML = score;
 let headJPG = document.querySelector(".headJPG");
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-var head = { x: 250, y: 200 };
-var cDirection = "right";
-var direction = "right";
-var moving = true;
-var speed = 200;
-var start = false;
+let c = document.getElementById("myCanvas");
+let ctx = c.getContext("2d");
+let head = { x: 250, y: 200 };
+let cDirection = "right";
+let direction = "right";
+let moving = true;
+let speed = 200;
+let start = false;
 ctx.fillStyle = `rgb( 0, 0, 0)`;
 ctx.fillRect(0, 0, 500, 450);
-var rangeinput = document.getElementById("rangeinput");
-var speeds = rangeinput.value;
-var apple;
+let rangeinput = document.getElementById("rangeinput");
+let speeds = rangeinput.value;
+let apple;
 let snake = [
   { x: 250, y: 200 },
   { x: 200, y: 200 },
@@ -172,7 +171,7 @@ function canHitWall() {
 
 //checks to see if snake can overlap
 function hitSelf() {
-  if (canHitSelf.checked == true) {
+  if (canHitSelf.checked) {
     for (let i = 1; i < snake.length; i++) {
       if (head.x == snake[i].x && head.y == snake[i].y) moving = false;
     }
@@ -183,7 +182,7 @@ function hitSelf() {
 function isLose() {
   sInFrame();
   hitSelf();
-  if (moving == false && score < 87) {
+  if (!moving && score < 87) {
     loseMessage.innerHTML = "You Lose!";
     prompts.innerHTML = "Press The Space Bar To Restart";
   }

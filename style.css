@@ -2,102 +2,83 @@
   padding: 0;
   margin: 0;
   font-family: 'Silkscreen', cursive;
+  color: white;
 }
 
 body {
   background-color: rgb(92, 92, 92);
 }
 
-#myCanvas {
-  padding: 200px;
-}
-
-#canHitSelf {
-  position: absolute;
-  top: 300px;
-  left: 750px;
-  height: 20px;
-  width: 20px;
-}
-
-#walls {
-  position: absolute;
-  top: 350px;
-  left: 750px;
-  height: 20px;
-  width: 20px;
-}
-
-.winOrLose > * {
-  position: absolute;
-  top: 150px;
-  left: 200px;
-  width: 500px;
+#title {
   text-align: center;
+  font-size: 8rem;
+  padding: auto;
 }
 
-#loseMessage {
-  color: rgb(255, 0, 0);
-}
-
-#winMessage {
-  color: rgb(0, 255, 0);
-}
-
-.explination > * {
-  position: absolute;
-  top: 300px;
-  left: 800px;
-  height: 20px;
-  color: rgb(255, 255, 255);
-}
-
-.explination :nth-child(2) {
-  top: 350px;
-}
-
-.explination :last-child {
-  top: 400px;
-  left: 830px; 
-}
-
-.score > * {
-  position: absolute;
-  top: 300px;
-  left: 0px;
-  width: 200px;
+.winOrLoose {
   text-align: center;
-  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  padding: auto;
+  min-height: 5rem;
+  width: 100%;
 }
 
-#uScore {
-  top: 330px;
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
 }
 
-.prompts {
-  position: absolute;
-  width: 500px;
-  top: 650px;
-  left: 200px;
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-.title {
-  position: absolute;
-  top: 0px;
-  left: 30px;
-  font-size: 100px;
-  color:rgb(255, 255, 255);
+#centerer {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+
 }
 
-.headJPG {
+#main-content {
+  display: grid;
+  grid-template-columns: 200px 600px 400px;
+  align-items: center;
+}
+
+img {
   visibility: hidden;
+  height: 0;
 }
-#rangeinput {
-  position: absolute;
-  align-self: center;
-  height: 20px;
-  width: 50px;
-  top: 400px;
-  left: 750px;
+
+#main-content #score {
+  display: flex;
+}
+
+#main-content #score:nth-child(1) {
+  padding-left: 3rem;
+}
+
+#main-content #game {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+#main-content #game canvas {
+  width: 100%;
+}
+
+#main-content #game .prompts {
+  text-align: center;
+  min-height: 3rem;
+  padding: auto;
+}
+
+#main-content #options {
+  width: 100%;
+}
+
+#options .explanation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 1rem;
 }

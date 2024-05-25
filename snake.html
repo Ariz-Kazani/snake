@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
-      rel="stylesheet"
-      />
-      <title>Snake</title>
-      <script src="script.js" defer></script>
-  </head>
-  <body>
-    <canvas id="myCanvas" width="500" height="450"></canvas>
-    <img class="headJPG" src="head3.png" />
-    <div class="winOrLose">
-      <h1 class="winOrLose" id="loseMessage"></h1>
-      <h1 class="winOrLose" id="winMessage"></h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet" />
+  <title>Snake</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">SNAKE</h1>
+  </header>
+  <main>
+    <div class="winOrLoose">
+      <h3 id="loseMessage"></h3>
+      <h3 id="winMessage"></h3>
     </div>
-    <input type="range" id="rangeinput" min="1" max="3" value="2" />
-    <div class="score">
-      <h1 class="score">Score:</h1>
-      <h1 class="score" id="uScore"></h1>
+    <div id="centerer">
+
+      <div id="main-content">
+        <div id="score">
+          <h1>Score:</h1>
+          <h1 id="uScore"></h1>
+        </div>
+        <div id="game">
+          <canvas class="canvas" id="myCanvas" width="500" height="450"></canvas>
+          <img class="headJPG" src="head3.png" />
+          <h3 class="prompts"></h3>
+        </div>
+        <div id="options">
+          <div class="explanation">
+            <h3>Enable Self Hit</h3>
+            <input id="canHitSelf" type="checkbox" checked />
+            <h3>Enable Walls</h3>
+            <input id="walls" type="checkbox" checked />
+            <h3>Speed</h3>
+            <input type="range" id="rangeinput" min="1" max="3" value="2" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="explination">
-      <h3 class="explination">Enable Self Hit</h3>
-      <h3 class="explination">Enable Walls</h3>
-      <h3 class="explination">Speed</h3>
-    </div>
-    <div class="title">SNAKE</div>
-    <h3 class="prompts"></h3>
-    <input id="canHitSelf" type="checkbox" checked />
-    <input id="walls" type="checkbox" checked />
-  </body>
+  </main>
+</body>
+
 </html>
